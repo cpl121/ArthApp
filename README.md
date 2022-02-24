@@ -1,4 +1,4 @@
-# 8-arthapp-ssc
+# ArthApp
 
 ## Project setup
 ```
