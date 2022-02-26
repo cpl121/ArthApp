@@ -2,7 +2,7 @@
   <div id="app">
     <h1 v-if="play">ARTH-APP</h1>
     <br>
-    <img src="./assets/ArthApp.jpg" width="180" height="180" v-if="!play">
+    <img src="./assets/ArthApp.jpg" alt="Logo" width="180" height="180" v-if="!play">
     <br>
     <b-button pill id="playButton" variant="outline-success" @click="play=!play" v-if="!play"><b-icon-play-fill animation="throb" scale="3"></b-icon-play-fill></b-button>
     <div v-if="play">
