@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <h1>ARTH-APP</h1>
-    <b-button id="playButton" variant="outline-success" @click="play=!play" v-if="!play"><b-icon-play-fill animation="throb" scale="3"></b-icon-play-fill></b-button>
+    <h1 v-if="play">ARTH-APP</h1>
+    <br>
+    <img src="./assets/ArthApp.jpg" width="180" height="180" v-if="!play">
+    <br>
+    <b-button pill id="playButton" variant="outline-success" @click="play=!play" v-if="!play"><b-icon-play-fill animation="throb" scale="3"></b-icon-play-fill></b-button>
     <div v-if="play">
       <Home />
     </div>
@@ -31,6 +34,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  align-items: center;
   color: #2c3e50;
   margin-top: 60px;
 }

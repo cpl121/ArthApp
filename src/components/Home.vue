@@ -157,6 +157,7 @@ export default {
       this.correct = 0;
       this.gameOver = false;
       this.countUpTimer();
+      this.countDownTimer();
     },
     nextOperation: function (answer) {
       if (answer == this.answer) {
