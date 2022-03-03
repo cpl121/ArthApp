@@ -1,16 +1,29 @@
 <template>
   <div id="app">
     <h1 v-if="play">ARTH-APP</h1>
-    <br>
-    <img src="./assets/ArthApp-min.jpg" alt="Logo" width="180" height="180" v-if="!play">
-    <br>
-    <b-button pill id="playButton" variant="outline-success" @click="play=!play" v-if="!play"><b-icon-play-fill animation="throb" scale="3"></b-icon-play-fill></b-button>
+    <div class="homePage" v-if="!play">
+      <img
+        src="./assets/ArthApp-min.jpg"
+        alt="Logo"
+        width="180"
+        height="180"
+      />
+      <hr>
+      <b-button
+        pill
+        id="playButton"
+        variant="outline-success"
+        @click="play = !play"
+        ><b-icon-play-fill animation="throb" scale="3"></b-icon-play-fill
+      ></b-button>
+    </div>
     <div v-if="play">
       <Home />
     </div>
-    <b-button variant="secondary" @click="play=!play" v-if="play"><b-icon-arrow-return-left scale="1,5"></b-icon-arrow-return-left></b-button>
-    <br>
-    <br>
+    <b-button variant="secondary" @click="play = !play" v-if="play"
+      ><b-icon-arrow-return-left scale="1,5"></b-icon-arrow-return-left
+    ></b-button>
+    <br />
   </div>
 </template>
 
@@ -25,8 +38,8 @@ export default {
   data() {
     return {
       play: false,
-    }
-  }
+    };
+  },
 };
 </script>
 
@@ -36,9 +49,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  align-items: center;
   color: #2c3e50;
   margin-top: 60px;
+  padding-bottom: 15%;
 }
 
 #playButton {
@@ -47,4 +60,9 @@ export default {
   height: 60px;
 }
 
+.homePage {
+  margin: 1%;
+  padding: 5%;
+  display: inline-block;
+}
 </style>
