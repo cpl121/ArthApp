@@ -9,6 +9,8 @@
       <Home />
     </div>
     <b-button variant="secondary" @click="play=!play" v-if="play"><b-icon-arrow-return-left scale="1,5"></b-icon-arrow-return-left></b-button>
+    <br>
+    <br>
   </div>
 </template>
 
