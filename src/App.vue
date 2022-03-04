@@ -24,6 +24,7 @@
       ><b-icon-arrow-return-left scale="1,5"></b-icon-arrow-return-left
     ></b-button>
     <br />
+    <div class="ads"></div>
   </div>
 </template>
 
@@ -37,7 +38,7 @@ export default {
   },
   data() {
     return {
-      play: false,
+      play: false
     };
   },
 };
@@ -51,7 +52,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  padding-bottom: 15%;
+  padding-bottom: 5%;
 }
 
 #playButton {
@@ -65,4 +66,9 @@ export default {
   padding: 5%;
   display: inline-block;
 }
+
+.ads {
+  padding: 10% ;
+}
+
 </style>
