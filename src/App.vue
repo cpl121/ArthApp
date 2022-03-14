@@ -1,30 +1,42 @@
 <template>
   <div id="app">
-    <h1 v-if="play">ARTH-APP</h1>
-    <div class="homePage" v-if="!play">
-      <img
-        src="./assets/ArthApp-min.jpg"
-        alt="Logo"
-        width="180"
-        height="180"
-      />
-      <hr>
-      <b-button
-        pill
-        id="playButton"
-        variant="outline-success"
-        @click="play = !play"
-        ><b-icon-play-fill animation="throb" scale="3"></b-icon-play-fill
+    <h1 v-if="level !== 0">ARTH-APP</h1>
+    <div class="homePage" v-if="level === 0">
+      <img src="./assets/ArthApp-min.jpg" alt="Logo" title="App Logo" />
+      <hr />
+
+      <div class="levels">
+        <b-button
+          pill
+          id="playButton"
+          variant="outline-success"
+          @click="level = 1"
+          ><b-icon-reception1 scale="2"></b-icon-reception1
+        ></b-button>
+        <b-button pill id="playButton" variant="outline-info" @click="level = 2"
+          ><b-icon-reception2 scale="2"></b-icon-reception2
+        ></b-button>
+        <b-button
+          pill
+          id="playButton"
+          variant="outline-danger"
+          @click="level = 3"
+          ><b-icon-reception3 scale="2"></b-icon-reception3
+        ></b-button>
+        <b-button pill id="playButton" variant="outline-dark" @click="level = 4"
+          ><b-icon-reception4 scale="2"></b-icon-reception4
+        ></b-button>
+      </div>
+    </div>
+    <div v-if="level !== 0">
+      <div>
+        <Home :level="level" />
+      </div>
+      <b-button variant="secondary" @click="level = 0"
+        ><b-icon-arrow-return-left scale="1,5"></b-icon-arrow-return-left
       ></b-button>
+      <br />
     </div>
-    <div v-if="play">
-      <Home />
-    </div>
-    <b-button variant="secondary" @click="play = !play" v-if="play"
-      ><b-icon-arrow-return-left scale="1,5"></b-icon-arrow-return-left
-    ></b-button>
-    <br />
-    <div class="ads"></div>
   </div>
 </template>
 
@@ -38,7 +50,8 @@ export default {
   },
   data() {
     return {
-      play: false
+      play: false,
+      level: 0,
     };
   },
 };
@@ -46,7 +59,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -56,19 +69,24 @@ export default {
 }
 
 #playButton {
-  margin-top: 10%;
-  width: 100px;
-  height: 60px;
+  position: flex;
+  margin: 10%;
+  width: 80px;
+  height: 50px;
 }
 
 .homePage {
-  margin: 1%;
-  padding: 5%;
+  padding: 1%;
   display: inline-block;
 }
 
-.ads {
-  padding: 10% ;
+.levels {
+  padding: 5%;
+  position: flex;
 }
 
+img {
+  width: 150px;
+  height: 150px;
+}
 </style>
