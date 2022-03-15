@@ -1,5 +1,11 @@
-[{
+[
+  {
     "relation": ["delegate_permission/common.handle_all_urls"],
-    "target" : { "namespace": "android_app", "package_name": "cpl.dev.arthapp",
-                 "sha256_cert_fingerprints": ["67:2E:18:26:45:EF:0B:76:6A:2E:1C:A1:39:F7:A6:3F:E7:5B:F5:70:7D:21:AA:77:86:2A:1C:B9:44:9A:47:EB"] }
-  }]
+    "target": {
+      "namespace": "android_app",
+      "package_name": "cpl.dev.arthapp",
+      "sha256_cert_fingerprints":
+        ["67:2E:18:26:45:EF:0B:76:6A:2E:1C:A1:39:F7:A6:3F:E7:5B:F5:70:7D:21:AA:77:86:2A:1C:B9:44:9A:47:EB"]
+    }
+  }
+]
